@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>186526的小站</title>
+    <style>
+    ::-webkit-scrollbar{
+      width:3px;
+    }
+    ::-webkit-scrollbar-thumb{
+      border-radius: 10px;
+      box-shadow: inset 0 0 5px rgba(0, 132, 255, 0.2);
+      background:rgba(0, 132, 255, 0.2)
+    }
+    ::-webkit-scrollbar-track{
+      box-shadow: inset 0 0 5px rgba(0, 132, 255, 0.2);
+      border-radius:0px;
+      background:rgba(0, 132, 255, 0.2);
+    }
+    body{margin: 0px;background-color: #fff;color: #2c3e50;}
+    @media(prefers-color-scheme: dark){body{background-color:#303030;color:#b3bdc7}}</style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+  window.onload = function(){
+    document.getElementById("main").className = "fadeinframe fadein";
+    document.getElementById("fpbackpic").className ="backpic blur-mask";
+    document.getElementById("ntbackpic").className ="nextbackpic blur-mask";
+    var bug = 0;
+  }
+  document.onscroll = function(){
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var cHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    if (scrollTop >= (cHeight-3)){
+      if (document.getElementById("firstscreen")!=null){document.getElementById("firstscreen").parentNode.removeChild(document.getElementById("firstscreen"));};
+      setTimeout(function(){document.getElementById("avatar").className ="avatar fadein fadeinframe"},500);
+      document.getElementById("ntbackpic").className ="nextbackpic more-blur";
+      setTimeout(function(){document.getElementById("list").className ="list fadein fadeinframe";},500);
+      setTimeout(function(){document.getElementById("footer").className ="footer fadein fadeinframe";},500);
+    }
+  }
+  console.log("%c[info] 加载字体……", "@font-face {font-family: sarasa;src: url(https://cdn.jsdelivr.net/gh/186526/jsdelivr@master/sarasa-ui-sc-regular.woff2);}")
+  console.log("%c ", "background: url('https://api.ixiaowai.cn/mcapi/mcapi.php') center center / cover;padding-left:100%;padding-bottom: 100vh;");
+  console.log("%c我们menhera酱超级可爱的！", "font-family: sarasa;font-size: 48px;");
+  console.log("%cB站频道指路 https://space.bilibili.com/326968804", "font-family: sarasa;font-size:12px;")
+  console.log("%c本项目使用vue进行编写，准备开源……", "font-family: sarasa;font-size:16px;");
+  console.log("%c页面加载消耗了 "+(Math.round(performance.now() * 100) /100 /1000).toFixed(2)+"s","font-family: sarasa;font-size:16px;");
+  console.log("%c感谢 jsdelivr 为本项目提供免费 开源的cdn", "font-family: sarasa;font-size:16px;");
+  console.log("%c感谢 https://www.ixiaowai.cn/ 为本项目提供免费的API", "font-family: sarasa;font-size:16px;");
+  console.log("%c小声逼逼：%c '每天起床第一句 var bug = 0;'", "font-family: sarasa;font-size:12px;", "font-size:12px;font-family: sarasa;font-style:italic;");
+  let i = 0;if (!localStorage.getItem('hit')) {localStorage.setItem('hit', 0)} else {i = parseInt(localStorage.getItem('hit'))};localStorage.setItem('hit', ++i);
+  console.log("%cPS:话说你打开"+i+"次是不是来偷代码的（逃","font-family: sarasa;font-size:8px;");
+  </script>
+</html>
